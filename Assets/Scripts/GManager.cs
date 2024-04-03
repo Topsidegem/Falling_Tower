@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class GManager : MonoBehaviour
 {
-    
-
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            //print(MovingCube.currentCube.name);
             MovingCube.currentCube.Stop();
         }
     }
