@@ -8,8 +8,13 @@ public class GManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //print(MovingCube.currentCube.name);
-            MovingCube.currentCube.Stop();
+            if(MovingCube.currentCube != null)
+            {
+                print(MovingCube.currentCube.name);
+                MovingCube.currentCube.Stop();
+            }
+            
+            FindObjectOfType<cubeSpawner>().SpawnCube();
         }
     }
 }
